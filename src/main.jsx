@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { blue } from '@mui/material/colors';
+import { yellow } from '@mui/material/colors';
 
 const theme = createTheme({
   palette:{
@@ -10,7 +10,7 @@ const theme = createTheme({
     custom: {  //se usa con theme.palette.custom.orange
       white: '#ffffffff',
       black: '#000000ff',
-      blueLight: blue[100],
+      blueLight: yellow[800],
       
     }
   }
