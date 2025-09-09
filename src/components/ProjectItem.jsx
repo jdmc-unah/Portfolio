@@ -49,6 +49,11 @@ const ProjectItem = ({ title, subheader, link, image, description   })=>{
         }));
 
 
+          const handleOpenLink = ()=>{
+    window.open(link,'_blank', 'noopener,noreferrer')
+  }
+
+
     return(
         
         <Card sx={{ width: 300 }}>
@@ -59,7 +64,7 @@ const ProjectItem = ({ title, subheader, link, image, description   })=>{
                   slotProps={{subheader:{ color: window.secondary }}}
                   action={
                       <>
-                        <IconButton href={link} aria-label="" onClick={()=>{}} >
+                        <IconButton  aria-label="" onClick={handleOpenLink} >
                           <GitHubIcon sx={{ color: window.custom.blueLight, width:30, height: 30 }} />
                         </IconButton>
                         <ExpandMore
