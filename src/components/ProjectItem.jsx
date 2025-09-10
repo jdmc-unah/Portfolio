@@ -12,16 +12,16 @@ import { useState } from 'react';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 
 
-
-
-const ProjectItem = ({ title, subheader, link, image, description   })=>{
+const ProjectItem = ({ title, subheader, gitLink, image, description, webLink   })=>{
     const [expanded, setExpanded] = useState(false);
     
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
+
 
     
     const ExpandMore = styled((props) => {
@@ -49,9 +49,13 @@ const ProjectItem = ({ title, subheader, link, image, description   })=>{
         }));
 
 
-          const handleOpenLink = ()=>{
-    window.open(link,'_blank', 'noopener,noreferrer')
-  }
+    const handleGitLink = ()=>{
+      window.open(gitLink,'_blank', 'noopener,noreferrer')
+    }
+
+    const handleWebLink = ()=>{
+      window.open(webLink,'_blank', 'noopener,noreferrer')
+    }
 
 
     return(
@@ -64,16 +68,27 @@ const ProjectItem = ({ title, subheader, link, image, description   })=>{
                   slotProps={{subheader:{ color: window.secondary }}}
                   action={
                       <>
-                        <IconButton  aria-label="" onClick={handleOpenLink} >
+                        { webLink  && 
+                          <IconButton  aria-label="" onClick={handleWebLink} >
+                            <LanguageRoundedIcon sx={{ color: window.custom.blueLight, width:32, height: 32 }} />
+                          </IconButton>  
+                        }
+                        
+                        { gitLink  && 
+                        <IconButton  aria-label="" onClick={handleGitLink} >
                           <GitHubIcon sx={{ color: window.custom.blueLight, width:30, height: 30 }} />
                         </IconButton>
+                        }
+
+                        
+                        
                         <ExpandMore
                           expand={expanded}
                           onClick={handleExpandClick}
                           aria-expanded={expanded}
                           aria-label="show more"
                         >
-                          <ExpandMoreIcon />
+                          <ExpandMoreIcon sx={{ color: ' #FFFFFF' }} />
                         </ExpandMore>
                       </>
                   }
