@@ -15,8 +15,6 @@ function App() {
           <Header  />
           <About />
           <Projects />
-          {/* <Skills /> */}
-          {/* <Contact /> */}
           <footer style={{height:50, backgroundColor:window.primary, color: window.custom.white, display:'flex', 
             justifyContent:'center', alignItems:'center'  }  } > 2025 </footer>
         </div>

@@ -109,7 +109,7 @@ const ProjectItem = ({ title, subheader, gitLink, image, description, webLink   
                     </Typography>
                   </CardContent>
                 </Collapse>
-                  </Card>
+              </Card>
                
         
     )
