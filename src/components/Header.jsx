@@ -46,7 +46,7 @@ const Header = () => {
         {/* FOTO como fondo en móvil */}
         <Box
           sx={{
-            width: { xs: "100%", md: "250px" },
+            width: '300px',
             height: { xs: "300px", md: "250px" },
             borderRadius: { xs: 0, md: "12px" },
             boxShadow: { md: "0px 8px 24px rgba(0,0,0,0.4)" },
@@ -54,7 +54,7 @@ const Header = () => {
               xs: `url(${profPic})`,
               md: `url(${profPic})`,
             },
-            backgroundSize: "cover",
+            backgroundSize: {md:"cover", xs:"cover"},
             backgroundPosition: "end",
             flexShrink: 0,
           }}

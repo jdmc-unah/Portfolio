@@ -60,7 +60,7 @@ const ProjectItem = ({ title, subheader, gitLink, image, description, webLink   
 
     return(
         
-        <Card sx={{ width: 300 }}>
+        <Card sx={{ width: 300, boxShadow: 'none' }} >
                 <CardHeader 
                   sx={{backgroundColor:window.primary, color:window.custom.white}}
                   title={title}

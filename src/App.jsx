@@ -5,7 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-
+import Services from './components/Services';
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
     <>
         <div>
           <Header  />
+          <Services/>
           <About />
           <Projects />
           <footer style={{height:50, backgroundColor:window.primary, color: window.custom.white, display:'flex', 
