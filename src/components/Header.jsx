@@ -24,6 +24,7 @@ const Header = () => {
 
   return (
     <header
+      
       style={{
         backgroundColor: "#1c1f26",
         color: "#fff",
