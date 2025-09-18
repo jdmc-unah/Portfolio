@@ -4,8 +4,24 @@ import profPic from '../assets/profpic.png'
 import { Box, Stack, IconButton, Typography, Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { menuitem } from 'framer-motion/client';
 
 const Header = () => {
+  
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const menuItems = [
+    {label: "Servicios", id: "services"},
+    {label: "Proyectos", id: "projects"}
+
+  ]
+
   return (
     <header
       style={{
@@ -22,15 +38,25 @@ const Header = () => {
         px={{ xs: 2, md: 6 }}
         py={3}
       >
-        <Typography variant="body1" sx={{ cursor: "pointer", fontWeight: 500 }}>
-          Servicios
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ cursor: "pointer", opacity: 0.6 }}
-        >
-          Proyectos
-        </Typography>
+        {menuItems.map( (i)=>(
+          <Button
+            key={i.id}
+            onClick={()=> handleScroll(i.id)}
+            variant="text"
+            sx={{
+              fontSize: 17,
+              color: "#facc15",
+              fontWeight: 500,
+              opacity: 0.8,
+              textTransform: "none",
+              "&:hover": {  opacity: 1, },
+            }}
+          >
+            {i.label}
+          </Button>
+        ) )}
+
+        
         
       </Box>
 
@@ -38,10 +64,11 @@ const Header = () => {
       <Box
         display="flex"
         flexDirection={{ xs: "column", md: "row" }}
-        alignItems="center"
+        alignItems= {{xs: 'center', sm:'center',  md: 'start', lg: 'start' }} 
         justifyContent="space-between"
+        
         px={{ xs: 2, md: 6 }}
-        pb={6}
+        py={5}
       >
         {/* FOTO como fondo en móvil */}
         <Box
@@ -101,6 +128,7 @@ const Header = () => {
           </Typography>
 
           <Button
+            onClick={()=> {handleScroll('about')}}
             variant="text"
             sx={{
               color: "#facc15",
