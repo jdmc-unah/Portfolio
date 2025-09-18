@@ -4,7 +4,6 @@ import profPic from '../assets/profpic.png'
 import { Box, Stack, IconButton, Typography, Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { menuitem } from 'framer-motion/client';
 
 const Header = () => {
   

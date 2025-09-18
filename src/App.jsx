@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Services from './components/Services';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -17,8 +18,7 @@ function App() {
           <section id='about' ><About /></section>
           <section id='projects'><Projects /></section>
           
-          <footer style={{height:50, backgroundColor:window.primary, color: window.custom.white, display:'flex', 
-            justifyContent:'center', alignItems:'center'  }  } > 2025 </footer>
+          <Footer/>
         </div>
     </>
   )

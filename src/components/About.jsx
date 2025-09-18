@@ -48,7 +48,7 @@ const About = () => {
               gutterBottom
               sx={{ color: "#111" }}
             >
-              Acerca de <span style={{ color: "#3a1cbcff" }}>Mí</span>
+              <span style={{ color: "#60a5fa" }}>Acerca de </span> mí
             </Typography>
             <Typography
               variant="body1"

@@ -141,7 +141,7 @@ const Projects = () => {
         align="center"
         sx={{ mb: { xs: 4, md: 6 }, color: "#111" }}
       >
-        Proyectos
+       Mis  <span style={{ color: "#60a5fa" }}>Proyectos</span> 
       </Typography>
 
       {/* Grid con animaciones */}

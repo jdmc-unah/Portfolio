@@ -5,7 +5,7 @@ import { yellow } from '@mui/material/colors';
 
 const theme = createTheme({
   palette:{
-    primary:{main: '#114B5F'}, 
+    primary:{main: '#1c1f26'}, 
     secondary: {main: '#dadadaff'},
     custom: {  //se usa con theme.palette.custom.orange
       white: '#ffffffff',
