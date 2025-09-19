@@ -1,12 +1,18 @@
 
 import profPic from '../assets/profpic.png'
+import { useState } from "react";
+import Contact from '../components/Contact';
 
 import { Box, Stack, IconButton, Typography, Button } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Header = () => {
-  
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
 
   const handleScroll = (id) => {
     const element = document.getElementById(id);
@@ -17,18 +23,25 @@ const Header = () => {
 
   const menuItems = [
     {label: "Servicios", id: "services"},
-    {label: "Proyectos", id: "projects"}
-
+    {label: "Proyectos", id: "projects"},
   ]
 
   return (
+    
+
     <header
-      
       style={{
         backgroundColor: "#1c1f26",
         color: "#fff",
       }}
     >
+
+      
+      {/* Modal de form de contacto */}
+      <Contact open={open} handleClose={handleClose} />
+     
+
+
       {/* NAVBAR */}
       <Box
         display="flex"
@@ -55,6 +68,21 @@ const Header = () => {
             {i.label}
           </Button>
         ) )}
+
+         <Button
+            onClick={handleOpen}
+            variant="text"
+            sx={{
+              fontSize: 17,
+              color: "#facc15",
+              fontWeight: 500,
+              opacity: 0.8,
+              textTransform: "none",
+              "&:hover": {  opacity: 1, },
+            }}
+          >
+            Contacto
+          </Button>
 
         
         
@@ -164,6 +192,7 @@ const Header = () => {
           </Stack>
         </Box>
       </Box>
+                
     </header>
   );
 };
