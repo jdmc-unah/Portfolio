@@ -94,6 +94,7 @@ const ProjectItem = ({ title, subheader, gitLink, image, description, webLink   
                   }
                 />
                 <CardMedia
+                  onClick={handleExpandClick}
                   component="img"
                   height="170"
                   image={image}

@@ -151,7 +151,7 @@ const ServiceCard = ({ service, index }) => {
 // Componente principal
 const Services = () => {
   return (
-    <Box sx={{ py: 10, px: { xs: 2, md: 6 }, backgroundColor: "#f8fafc" }}>
+    <Box sx={{ pt:10, pb: 5, px: { xs: 2, md: 6 }, backgroundColor: "#f8fafc" }}>
       <Typography
         variant="h4"
         fontWeight="700"

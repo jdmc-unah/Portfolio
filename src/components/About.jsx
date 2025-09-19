@@ -43,6 +43,7 @@ const About = () => {
           {/* Texto */}
           <Box>
             <Typography
+            textAlign={ { xs: 'center', xl: 'start'}}
               variant="h4"
               fontWeight="700"
               gutterBottom
@@ -51,11 +52,12 @@ const About = () => {
               <span style={{ color: "#60a5fa" }}>Acerca de </span> mí
             </Typography>
             <Typography
+              textAlign={ { xs: 'justify', xl: 'start'}}
               variant="body1"
               sx={{
                 color: "#555",
                 lineHeight: 1.7,
-                maxWidth: 600,
+                maxWidth: {lg: 600 } ,
               }}
             >
             Soy un estudiante de Ingeniería en sistemas con una creciente experiencia en el análisis de datos,
